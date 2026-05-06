@@ -8,7 +8,7 @@ export function Startups() {
       <div className="relative mx-auto max-w-6xl">
         <div className="scroll-reveal mb-16 flex items-center gap-4 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
           <span className="h-px w-12 bg-foreground/40" />
-          03 — STARTUPS / IN MARKET
+          03 — STARTUPS
         </div>
 
         {/* Crush */}
@@ -16,15 +16,18 @@ export function Startups() {
           <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
           <div className="relative grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-7">
-              <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground mb-4">LIVE · THOUSANDS OF STUDENTS</div>
+              <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground mb-4">LIVE · USED BY THOUSANDS OF STUDENTS</div>
               <h3 className="font-display text-7xl md:text-9xl tracking-tight mb-6 text-metal">Crush</h3>
-              <p className="text-xl leading-relaxed text-foreground/80 max-w-xl mb-6">
-                A campus of <em className="text-metal not-italic">hidden signals</em>. People privately mark who they want.
-                When two signals converge, a match emerges from the noise.
+              <p className="text-xl leading-relaxed text-foreground/80 max-w-xl mb-4">
+                Add people you like, anonymously, using your school email.
+                If they pick you back, it's a match.
               </p>
-              <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
-                A new geometry of social interaction — built around mutual discovery instead of public performance.
+              <p className="text-base leading-relaxed text-muted-foreground max-w-xl mb-8">
+                That's it. Already running on campuses across the country.
               </p>
+              <a href="https://try-crush.com" target="_blank" rel="noopener noreferrer" data-cursor className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] text-foreground hover:text-metal transition">
+                TRY-CRUSH.COM <span aria-hidden>↗</span>
+              </a>
             </div>
             <div className="col-span-12 md:col-span-5">
               <CrushVisual />
@@ -33,22 +36,46 @@ export function Startups() {
         </div>
 
         {/* Veto */}
-        <div className="scroll-reveal relative overflow-hidden rounded-3xl border border-border glass-strong p-10 md:p-16">
+        <div className="scroll-reveal relative mb-32 overflow-hidden rounded-3xl border border-border glass-strong p-10 md:p-16">
           <div className="absolute -left-32 -bottom-32 h-96 w-96 rounded-full bg-white/5 blur-3xl" />
           <div className="relative grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-5 order-2 md:order-1">
               <VetoVisual />
             </div>
             <div className="col-span-12 md:col-span-7 order-1 md:order-2">
-              <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground mb-4">SAFETY LAYER · AGENT INFRASTRUCTURE</div>
+              <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground mb-4">SAFETY LAYER FOR AI AGENTS</div>
               <h3 className="font-display text-7xl md:text-9xl tracking-tight mb-6 text-metal">Veto</h3>
-              <p className="text-xl leading-relaxed text-foreground/80 max-w-xl mb-6">
-                A <em className="text-metal not-italic">control plane</em> for AI. Veto sits between decision and execution,
-                intercepting harmful actions before they reach the world.
+              <p className="text-xl leading-relaxed text-foreground/80 max-w-xl mb-4">
+                Veto sits between AI agents and the actions they want to take.
+                Risky moves get stopped before they happen.
+              </p>
+              <p className="text-base leading-relaxed text-muted-foreground max-w-xl mb-8">
+                Prevention, not a log file you read after the damage is done.
+              </p>
+              <a href="https://www.veto.ink" target="_blank" rel="noopener noreferrer" data-cursor className="inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] text-foreground hover:text-metal transition">
+                VETO.INK <span aria-hidden>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* FlexiGo */}
+        <div className="scroll-reveal relative overflow-hidden rounded-3xl border border-border glass-strong p-10 md:p-16">
+          <div className="absolute -right-24 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-white/5 blur-3xl" />
+          <div className="relative grid grid-cols-12 gap-8">
+            <div className="col-span-12 md:col-span-7">
+              <div className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground mb-4">LAUNCHING SOON · EAST AFRICA</div>
+              <h3 className="font-display text-7xl md:text-9xl tracking-tight mb-6 text-metal">FlexiGo</h3>
+              <p className="text-xl leading-relaxed text-foreground/80 max-w-xl mb-4">
+                A rideshare and delivery app built for East Africa.
+                Designed for how people actually move and send things at home.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground max-w-xl">
-                The thin, watchful membrane between what an agent <em>could</em> do and what it <em>should</em>.
+                Simpler logistics, more access, fewer middlemen.
               </p>
+            </div>
+            <div className="col-span-12 md:col-span-5">
+              <FlexiGoVisual />
             </div>
           </div>
         </div>
@@ -106,6 +133,40 @@ function VetoVisual() {
         <circle cx="180" cy="100" r="2" fill="white" fillOpacity="0.3">
           <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
         </circle>
+      </svg>
+    </div>
+  );
+}
+
+function FlexiGoVisual() {
+  return (
+    <div className="relative aspect-square w-full">
+      <svg viewBox="0 0 200 200" className="h-full w-full">
+        <defs>
+          <path id="route" d="M30,160 Q60,120 90,130 T150,70 Q170,55 175,30" fill="none" />
+        </defs>
+        {/* faint road grid */}
+        {[40, 80, 120, 160].map((y) => (
+          <line key={y} x1="0" y1={y} x2="200" y2={y} stroke="white" strokeOpacity="0.05" />
+        ))}
+        {[40, 80, 120, 160].map((x) => (
+          <line key={x} x1={x} y1="0" x2={x} y2="200" stroke="white" strokeOpacity="0.05" />
+        ))}
+        <use href="#route" stroke="white" strokeOpacity="0.5" strokeWidth="0.6" strokeDasharray="3 3" />
+        <circle cx="30" cy="160" r="3" fill="white" />
+        <circle cx="175" cy="30" r="3" fill="white" />
+        <circle r="3.5" fill="white">
+          <animateMotion dur="4s" repeatCount="indefinite">
+            <mpath href="#route" />
+          </animateMotion>
+        </circle>
+        <circle r="8" fill="white" fillOpacity="0.15">
+          <animateMotion dur="4s" repeatCount="indefinite">
+            <mpath href="#route" />
+          </animateMotion>
+        </circle>
+        <text x="30" y="178" fill="white" fillOpacity="0.5" fontSize="6" fontFamily="monospace" letterSpacing="1">PICKUP</text>
+        <text x="175" y="22" textAnchor="end" fill="white" fillOpacity="0.5" fontSize="6" fontFamily="monospace" letterSpacing="1">DROP</text>
       </svg>
     </div>
   );

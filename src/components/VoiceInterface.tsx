@@ -4,9 +4,9 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 type State = "idle" | "listening" | "thinking" | "speaking";
 
 const transcripts: Record<Exclude<State, "idle">, string> = {
-  listening: "Listening for your question…",
-  thinking: "Processing — routing through the system…",
-  speaking: "Hi, I'm Akuei. I build at the intersection of ML, systems, and product.",
+  listening: "Listening…",
+  thinking: "Thinking…",
+  speaking: "Hey, I'm Akuei. Ask me anything — about Crush, Veto, FlexiGo, or what I'm working on next.",
 };
 
 export function VoiceInterface() {
@@ -41,11 +41,10 @@ export function VoiceInterface() {
           <span className="h-px w-12 bg-foreground/40" />
         </div>
         <h2 className="scroll-reveal font-display text-5xl md:text-8xl tracking-tight mb-6">
-          Talk to <em className="text-metal not-italic">Akuei</em>.
+          Just <em className="text-metal not-italic">talk</em> to me.
         </h2>
         <p className="scroll-reveal text-lg text-muted-foreground max-w-xl mx-auto mb-16">
-          Ask anything — about the systems, the startups, or the thinking behind them.
-          A digital extension, in his own voice.
+          Tap the orb and ask whatever you want. It's me, in voice.
         </p>
 
         <div className="scroll-reveal flex flex-col items-center gap-10">

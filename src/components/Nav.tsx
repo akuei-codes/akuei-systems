@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { id: "identity", label: "Identity" },
-  { id: "projects", label: "Projects" },
+  { id: "identity", label: "About" },
   { id: "startups", label: "Startups" },
-  { id: "capabilities", label: "Capabilities" },
-  { id: "contact", label: "Interface" },
+  { id: "projects", label: "Work" },
+  { id: "capabilities", label: "Stack" },
+  { id: "contact", label: "Talk" },
 ];
 
 export function Nav() {

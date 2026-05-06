@@ -7,22 +7,22 @@ export function Identity() {
       <div className="mx-auto max-w-6xl">
         <div className="scroll-reveal mb-16 flex items-center gap-4 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
           <span className="h-px w-12 bg-foreground/40" />
-          01 — IDENTITY
+          01 — ABOUT
         </div>
         <p className="scroll-reveal font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] tracking-tight">
-          I think in <em className="text-metal not-italic">systems</em>. I build with
-          <em className="italic text-foreground/70"> intention</em>. I ship things that <span className="text-metal">touch real people</span> —
-          a campus of students discovering each other, riders moving through cities,
-          coders racing in real-time, AI agents kept on a leash.
+          I like building <em className="text-metal not-italic">products</em> that solve real problems
+          and end up in people's <em className="italic text-foreground/70">daily lives</em>.
+          Sometimes that's an app, sometimes infrastructure, sometimes a startup.
+          I just like making things that work.
         </p>
         <div className="scroll-reveal mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border md:grid-cols-3 bg-border">
           {[
-            { k: "Edu", v: "Princeton CS" },
-            { k: "Domain", v: "ML · Systems · Product" },
-            { k: "Scale", v: "Thousands of users" },
-            { k: "Stack", v: "PyTorch · TS · Swift" },
-            { k: "Mode", v: "Founder & Builder" },
-            { k: "Now", v: "Shipping Crush & Veto" },
+            { k: "School", v: "Princeton CS" },
+            { k: "Work", v: "ML · Systems · Product" },
+            { k: "Reach", v: "Thousands of users" },
+            { k: "Tools", v: "PyTorch · TS · Swift" },
+            { k: "Role", v: "Founder & Builder" },
+            { k: "Now", v: "Crush, Veto, FlexiGo" },
           ].map((c) => (
             <div key={c.k} className="bg-background p-8 hairline">
               <div className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground mb-3">{c.k.toUpperCase()}</div>

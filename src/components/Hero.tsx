@@ -19,11 +19,9 @@ export function Hero() {
 
   return (
     <section id="identity" ref={ref} className="relative min-h-screen w-full overflow-hidden grain">
-      {/* ambient orbs */}
       <div className="glow-orb left-[10%] top-[20%] h-[420px] w-[420px] bg-white/5" style={{ animation: "float-slow 14s ease-in-out infinite" }} />
       <div className="glow-orb right-[5%] bottom-[10%] h-[520px] w-[520px] bg-white/5" style={{ animation: "float-slow 18s ease-in-out infinite reverse" }} />
 
-      {/* grid */}
       <div className="absolute inset-0 opacity-[0.07]" style={{
         backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
         backgroundSize: "80px 80px",
@@ -37,7 +35,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground opacity-60" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-foreground" />
             </span>
-            SYSTEM ONLINE — v2026.5
+            ONLINE — PRINCETON, NJ
           </div>
 
           <h1 className="reveal reveal-delay-1 font-display text-[clamp(3.5rem,11vw,11rem)] leading-[0.88] tracking-tight">
@@ -47,15 +45,15 @@ export function Hero() {
 
           <div className="reveal reveal-delay-2 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
             <p className="text-base leading-relaxed text-muted-foreground md:col-span-2">
-              Engineer at <span className="text-foreground">Princeton</span>, working at the seam where
-              <span className="text-foreground"> machine learning</span>, <span className="text-foreground">distributed systems</span>,
-              and <span className="text-foreground">human behavior</span> meet. I build products people actually use —
-              and startups that change the way they meet, move, and trust software.
+              I'm a CS student at <span className="text-foreground">Princeton</span>. I build things people actually use —
+              apps, infrastructure, and a few startups. Right now I'm working on
+              <span className="text-foreground"> Crush</span>, <span className="text-foreground">Veto</span>, and
+              <span className="text-foreground"> FlexiGo</span>.
             </p>
             <div className="font-mono text-xs leading-relaxed text-muted-foreground space-y-1">
-              <div><span className="text-foreground/60">→</span> Computer Science · Princeton</div>
-              <div><span className="text-foreground/60">→</span> Founder · Crush, Veto</div>
-              <div><span className="text-foreground/60">→</span> Builder · Icon, FlexiGo</div>
+              <div><span className="text-foreground/60">→</span> Studying CS at Princeton</div>
+              <div><span className="text-foreground/60">→</span> Building Crush, Veto, FlexiGo</div>
+              <div><span className="text-foreground/60">→</span> Into ML, systems, product</div>
               <div><span className="text-foreground/60">→</span> Currently: shipping</div>
             </div>
           </div>
@@ -67,7 +65,7 @@ export function Hero() {
             <span className="text-foreground/40">↓</span>
           </div>
           <div className="hidden md:block max-w-xs text-right leading-relaxed">
-            "BUILD THE SYSTEM<br />THAT BUILDS THE THING."
+            JUST KEEP BUILDING.
           </div>
         </div>
       </div>

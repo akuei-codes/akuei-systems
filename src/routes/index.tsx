@@ -21,8 +21,8 @@ function Index() {
       <main>
         <Hero />
         <Identity />
-        <Projects />
         <Startups />
+        <Projects />
         <Capabilities />
         <VoiceInterface />
       </main>

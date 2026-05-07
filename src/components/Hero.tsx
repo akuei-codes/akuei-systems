@@ -71,7 +71,7 @@ export function Hero() {
           <div className="reveal reveal-delay-4 flex flex-wrap items-center gap-3 pt-2">
             <a
               href="/akuei-resume.pdf"
-              download="Akuei_Akuei_Resume.pdf"
+              download="Akuei_Johnson_Ateny_Akuei_Resume.pdf"
               data-cursor
               className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 font-mono text-[11px] tracking-[0.2em] text-primary-foreground hover:bg-foreground/90 transition"
             >

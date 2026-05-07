@@ -92,7 +92,7 @@ export function Projects() {
         </article>
 
         <article className="scroll-reveal mb-28 grid grid-cols-12 items-stretch gap-10 lg:gap-12">
-          <div className="order-2 flex flex-col justify-center lg:order-1 lg:col-span-7 lg:pr-6">
+          <div className="order-2 col-span-12 flex flex-col justify-center lg:order-1 lg:col-span-7 lg:pr-6">
             <div className="mb-4 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
               MAY 2024 — PRESENT
             </div>
@@ -122,7 +122,7 @@ export function Projects() {
               ))}
             </div>
           </div>
-          <div className="order-1 lg:order-2 lg:col-span-5">
+          <div className="order-1 col-span-12 lg:order-2 lg:col-span-5">
             <TiltVisual>
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.35rem] border border-border/90 bg-gradient-to-bl from-[oklch(0.52_0.12_200/0.15)] via-white/[0.04] to-transparent shadow-[0_40px_100px_-48px_oklch(0_0_0/0.85)]">
                 <div className="absolute inset-0 grain" />

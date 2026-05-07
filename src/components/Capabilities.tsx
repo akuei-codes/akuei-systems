@@ -1,7 +1,15 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { useState } from "react";
 import {
-  Code2, Layout, Server, Brain, Database, Cloud, Radio, Network, type LucideIcon,
+  Code2,
+  Layout,
+  Server,
+  Brain,
+  Database,
+  Cloud,
+  Radio,
+  Network,
+  type LucideIcon,
 } from "lucide-react";
 
 type Item = { name: string; w?: 1 | 2 | 3; note?: string };
@@ -130,8 +138,8 @@ export function Capabilities() {
     <section id="capabilities" className="relative px-8 py-32 md:px-16 md:py-48">
       <div className="mx-auto max-w-6xl">
         <div className="scroll-reveal mb-16 flex items-center gap-4 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
-          <span className="h-px w-12 bg-foreground/40" />
-          04 — STACK
+          <span className="h-px w-14 bg-gradient-to-r from-transparent via-foreground/50 to-foreground/20" />
+          05 — STACK
         </div>
         <div className="flex items-end justify-between gap-8 mb-16 flex-wrap">
           <div>
@@ -139,19 +147,25 @@ export function Capabilities() {
               What I actually <em className="text-metal not-italic">use</em>.
             </h2>
             <p className="scroll-reveal max-w-xl text-muted-foreground text-base leading-relaxed">
-              Tools I reach for when shipping. Bigger means I lean on it more.
-              Hover anything to see how it fits.
+              Tools I reach for when shipping. Bigger means I lean on it more. Hover anything to see
+              how it fits.
             </p>
           </div>
-          <div className="scroll-reveal min-h-[64px] min-w-[260px] rounded-xl border border-border bg-card/40 px-4 py-3 backdrop-blur">
-            <div className="font-mono text-[9px] tracking-[0.3em] text-muted-foreground mb-1">
-              {hover ? "FOCUS" : "IDLE"}
-            </div>
-            <div className="font-mono text-sm text-foreground">
-              {hover ? hover.name : "// hover a tech"}
-            </div>
-            <div className="font-mono text-[10px] text-muted-foreground mt-0.5">
-              {hover?.note ?? "tap, hover, explore"}
+          <div className="scroll-reveal relative min-h-[72px] min-w-[280px] overflow-hidden rounded-xl border border-border/80 bg-[oklch(0.088_0.02_280/0.55)] px-4 py-3.5 shadow-[inset_0_1px_0_oklch(1_0_0/0.06)] backdrop-blur-xl">
+            <div
+              className="pointer-events-none absolute -right-6 -top-8 h-24 w-24 rounded-full bg-[oklch(0.7_0.16_300/0.2)] blur-2xl"
+              aria-hidden
+            />
+            <div className="relative">
+              <div className="mb-1 font-mono text-[9px] tracking-[0.3em] text-muted-foreground">
+                {hover ? "FOCUS" : "IDLE"}
+              </div>
+              <div className="font-mono text-sm text-foreground">
+                {hover ? hover.name : "// hover a tech"}
+              </div>
+              <div className="mt-0.5 font-mono text-[10px] text-muted-foreground">
+                {hover?.note ?? "tap, hover, explore"}
+              </div>
             </div>
           </div>
         </div>
@@ -195,15 +209,18 @@ export function Capabilities() {
                   <div className="flex flex-wrap gap-x-2 gap-y-2">
                     {g.items.map((it, ii) => {
                       const size =
-                        it.w === 3 ? "text-[15px] text-foreground" :
-                        it.w === 2 ? "text-[13px] text-foreground/80" :
-                                     "text-[11px] text-muted-foreground";
-                      const dim =
-                        hover && hover.name !== it.name ? "opacity-35" : "opacity-100";
+                        it.w === 3
+                          ? "text-[15px] text-foreground"
+                          : it.w === 2
+                            ? "text-[13px] text-foreground/80"
+                            : "text-[11px] text-muted-foreground";
+                      const dim = hover && hover.name !== it.name ? "opacity-35" : "opacity-100";
                       const dot =
-                        it.w === 3 ? "bg-foreground" :
-                        it.w === 2 ? "bg-foreground/60" :
-                                     "bg-foreground/30";
+                        it.w === 3
+                          ? "bg-foreground"
+                          : it.w === 2
+                            ? "bg-foreground/60"
+                            : "bg-foreground/30";
                       return (
                         <span
                           key={it.name}
@@ -213,7 +230,9 @@ export function Capabilities() {
                           style={{ transitionDelay: `${ii * 20}ms` }}
                           className={`group/pill inline-flex items-center gap-1.5 rounded-full border border-border/60 bg-background/40 px-3 py-1 font-mono tracking-wide transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/50 hover:bg-foreground hover:text-primary-foreground hover:shadow-[0_8px_24px_-8px_oklch(1_0_0/0.25)] ${size} ${dim}`}
                         >
-                          <span className={`h-1 w-1 rounded-full ${dot} group-hover/pill:bg-primary-foreground/70`} />
+                          <span
+                            className={`h-1 w-1 rounded-full ${dot} group-hover/pill:bg-primary-foreground/70`}
+                          />
                           {it.name}
                         </span>
                       );
@@ -225,11 +244,26 @@ export function Capabilities() {
           })}
         </div>
 
-        <div className="scroll-reveal mt-16 overflow-hidden border-y border-border py-6">
-          <div className="marquee flex gap-16 whitespace-nowrap font-display text-3xl md:text-5xl text-foreground/30">
+        <div className="scroll-reveal mt-16 overflow-hidden rounded-2xl border border-border/60 bg-black/20 py-7">
+          <div className="marquee marquee-chrome flex gap-16 whitespace-nowrap font-display text-3xl md:text-5xl">
             {Array.from({ length: 2 }).map((_, k) => (
               <div key={k} className="flex gap-16">
-                {["RESEARCH", "·", "STARTUPS", "·", "INDUSTRY", "·", "PRINCETON", "·", "ML", "·", "SYSTEMS", "·", "PRODUCT", "·"].map((w, i) => (
+                {[
+                  "RESEARCH",
+                  "·",
+                  "STARTUPS",
+                  "·",
+                  "INDUSTRY",
+                  "·",
+                  "PRINCETON",
+                  "·",
+                  "ML",
+                  "·",
+                  "SYSTEMS",
+                  "·",
+                  "PRODUCT",
+                  "·",
+                ].map((w, i) => (
                   <span key={i}>{w}</span>
                 ))}
               </div>

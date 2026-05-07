@@ -12,7 +12,7 @@ export function useScrollReveal() {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();

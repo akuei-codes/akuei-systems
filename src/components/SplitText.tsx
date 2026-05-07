@@ -1,4 +1,4 @@
-import { ElementType, ReactNode } from "react";
+import { createElement, type ElementType, type ReactNode } from "react";
 
 interface Props {
   text: string;
@@ -9,8 +9,14 @@ interface Props {
   charClassName?: string;
 }
 
-export function SplitText({ text, className, delay = 0, step = 0.025, as = "span", charClassName }: Props) {
-  const Tag: any = as;
+export function SplitText({
+  text,
+  className,
+  delay = 0,
+  step = 0.025,
+  as = "span",
+  charClassName,
+}: Props) {
   const words = text.split(" ");
   let idx = 0;
   const out: ReactNode[] = [];
@@ -19,17 +25,25 @@ export function SplitText({ text, className, delay = 0, step = 0.025, as = "span
     for (const ch of w) {
       const d = delay + idx * step;
       chars.push(
-        <span key={`${wi}-${idx}`} className={`split-char ${charClassName ?? ""}`} style={{ animationDelay: `${d}s` }}>
+        <span
+          key={`${wi}-${idx}`}
+          className={`split-char ${charClassName ?? ""}`}
+          style={{ animationDelay: `${d}s` }}
+        >
           {ch}
-        </span>
+        </span>,
       );
       idx++;
     }
-    out.push(<span key={`w-${wi}`} className="split-word">{chars}</span>);
+    out.push(
+      <span key={`w-${wi}`} className="split-word">
+        {chars}
+      </span>,
+    );
     if (wi < words.length - 1) {
       out.push(<span key={`s-${wi}`} style={{ display: "inline-block", width: "0.32em" }} />);
       idx++;
     }
   });
-  return <Tag className={className}>{out}</Tag>;
+  return createElement(as, { className }, out);
 }

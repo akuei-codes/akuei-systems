@@ -9,6 +9,8 @@ import { Experience } from "@/components/Experience";
 import { VoiceInterface } from "@/components/VoiceInterface";
 import { Footer } from "@/components/Footer";
 import { Cursor } from "@/components/Cursor";
+import { ScrollProgress } from "@/components/SiteChrome";
+import { QuantumBalls } from "@/components/QuantumBalls";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -17,9 +19,11 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div id="top" className="relative min-h-screen bg-background text-foreground">
+      <QuantumBalls />
+      <ScrollProgress />
       <Cursor />
       <Nav />
-      <main>
+      <main className="site-main relative z-[15] bg-transparent">
         <Hero />
         <Identity />
         <Startups />

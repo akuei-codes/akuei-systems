@@ -19,18 +19,34 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="identity" ref={ref} className="relative min-h-screen w-full overflow-hidden grain">
-      <div className="glow-orb left-[10%] top-[20%] h-[420px] w-[420px] bg-white/5" style={{ animation: "float-slow 14s ease-in-out infinite" }} />
-      <div className="glow-orb right-[5%] bottom-[10%] h-[520px] w-[520px] bg-white/5" style={{ animation: "float-slow 18s ease-in-out infinite reverse" }} />
+    <section ref={ref} className="relative min-h-screen w-full overflow-hidden grain">
+      <div
+        className="glow-orb left-[10%] top-[20%] h-[420px] w-[420px] bg-white/5"
+        style={{ animation: "float-slow 14s ease-in-out infinite" }}
+      />
+      <div
+        className="glow-orb right-[5%] bottom-[10%] h-[520px] w-[520px] bg-white/5"
+        style={{ animation: "float-slow 18s ease-in-out infinite reverse" }}
+      />
 
-      <div className="absolute inset-0 opacity-[0.07]" style={{
-        backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-        backgroundSize: "80px 80px",
-        maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
-      }} />
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
+        }}
+      />
 
-      <div className="relative z-10 flex min-h-screen flex-col justify-between px-8 pt-32 pb-12 md:px-16">
-        <div className="flex flex-col gap-8" style={{ transform: "translate(var(--mx,0), var(--my,0))", transition: "transform 0.4s ease-out" }}>
+      <div className="relative z-10 flex min-h-screen flex-col justify-between px-6 pb-28 pt-28 md:px-12 md:pb-14 md:pt-36 lg:px-16">
+        <div
+          className="flex flex-col gap-8"
+          style={{
+            transform: "translate(var(--mx,0), var(--my,0))",
+            transition: "transform 0.4s ease-out",
+          }}
+        >
           <div className="reveal flex items-center gap-3 font-mono text-[10px] tracking-[0.3em] text-muted-foreground">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-foreground opacity-60" />
@@ -43,10 +59,22 @@ export function Hero() {
             <span className="block">
               <SplitText as="span" text="Akuei" className="name-akuei" delay={0.1} step={0.04} />
               <span style={{ display: "inline-block", width: "0.32em" }} />
-              <SplitText as="span" text="Johnson" className="name-johnson italic" delay={0.36} step={0.04} />
+              <SplitText
+                as="span"
+                text="Johnson"
+                className="name-johnson italic"
+                delay={0.36}
+                step={0.04}
+              />
             </span>
             <span className="block">
-              <SplitText as="span" text="Ateny" className="name-ateny italic" delay={0.72} step={0.04} />
+              <SplitText
+                as="span"
+                text="Ateny"
+                className="name-ateny italic"
+                delay={0.72}
+                step={0.04}
+              />
               <span style={{ display: "inline-block", width: "0.32em" }} />
               <SplitText as="span" text="Akuei." className="name-akuei2" delay={0.96} step={0.04} />
             </span>
@@ -55,7 +83,7 @@ export function Hero() {
           <div className="grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
             <p className="text-base leading-relaxed text-muted-foreground md:col-span-2">
               <SplitText
-                text="I'm a CS student at Princeton. I build things people actually use — apps, infrastructure, and a few startups. Right now I'm working on Crush, Veto, and FlexiGo."
+                text="I'm a CS student at Princeton. I build things people actually use: apps, infrastructure, and a few startups. Right now I'm working on Crush, Veto, and FlexiGo."
                 delay={1.4}
                 step={0.012}
               />
@@ -111,7 +139,9 @@ function CodeBlock() {
         <span className="ide-dot" style={{ background: "#ff5f56" }} />
         <span className="ide-dot" style={{ background: "#ffbd2e" }} />
         <span className="ide-dot" style={{ background: "#27c93f" }} />
-        <span className="ml-3 font-mono text-[10px] tracking-[0.2em] text-muted-foreground">now.ts</span>
+        <span className="ml-3 font-mono text-[10px] tracking-[0.2em] text-muted-foreground">
+          now.ts
+        </span>
       </div>
       <div className="ide-body">
         <Line n={1} style={line(0)}>
@@ -126,13 +156,15 @@ function CodeBlock() {
           <span className="tk-pun">{"{"}</span>
         </Line>
         <Line n={3} style={line(2)}>
-          {"  "}<span className="tk-var">school</span>
+          {"  "}
+          <span className="tk-var">school</span>
           <span className="tk-pun">: </span>
           <span className="tk-str">"CS @ Princeton"</span>
           <span className="tk-pun">,</span>
         </Line>
         <Line n={4} style={line(3)}>
-          {"  "}<span className="tk-var">building</span>
+          {"  "}
+          <span className="tk-var">building</span>
           <span className="tk-pun">: [</span>
           <span className="tk-str">"Crush"</span>
           <span className="tk-pun">, </span>
@@ -142,7 +174,8 @@ function CodeBlock() {
           <span className="tk-pun">],</span>
         </Line>
         <Line n={5} style={line(4)}>
-          {"  "}<span className="tk-var">into</span>
+          {"  "}
+          <span className="tk-var">into</span>
           <span className="tk-pun">: [</span>
           <span className="tk-str">"ML"</span>
           <span className="tk-pun">, </span>
@@ -152,7 +185,8 @@ function CodeBlock() {
           <span className="tk-pun">],</span>
         </Line>
         <Line n={6} style={line(5)}>
-          {"  "}<span className="tk-var">status</span>
+          {"  "}
+          <span className="tk-var">status</span>
           <span className="tk-pun">: </span>
           <span className="tk-fn">ship</span>
           <span className="tk-pun">(</span>
@@ -170,7 +204,15 @@ function CodeBlock() {
   );
 }
 
-function Line({ n, style, children }: { n: number; style?: React.CSSProperties; children: React.ReactNode }) {
+function Line({
+  n,
+  style,
+  children,
+}: {
+  n: number;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}) {
   return (
     <div className="ide-line reveal" style={style}>
       <span className="ide-gutter">{n}</span>

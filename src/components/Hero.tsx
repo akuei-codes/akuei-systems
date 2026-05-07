@@ -40,20 +40,16 @@ export function Hero() {
           </div>
 
           <h1 className="font-display text-[clamp(3.5rem,11vw,11rem)] leading-[0.88] tracking-tight">
-            <SplitText
-              as="span"
-              text="Akuei Johnson"
-              className="block text-metal"
-              delay={0.1}
-              step={0.04}
-            />
-            <SplitText
-              as="span"
-              text="Ateny Akuei."
-              className="block italic text-foreground/90"
-              delay={0.7}
-              step={0.04}
-            />
+            <span className="block">
+              <SplitText as="span" text="Akuei" className="name-akuei" delay={0.1} step={0.04} />
+              <span style={{ display: "inline-block", width: "0.32em" }} />
+              <SplitText as="span" text="Johnson" className="name-johnson italic" delay={0.36} step={0.04} />
+            </span>
+            <span className="block">
+              <SplitText as="span" text="Ateny" className="name-ateny italic" delay={0.72} step={0.04} />
+              <span style={{ display: "inline-block", width: "0.32em" }} />
+              <SplitText as="span" text="Akuei." className="name-akuei2" delay={0.96} step={0.04} />
+            </span>
           </h1>
 
           <div className="grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">

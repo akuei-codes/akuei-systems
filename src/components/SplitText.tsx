@@ -1,16 +1,16 @@
-import { ReactNode } from "react";
+import { ElementType, ReactNode } from "react";
 
 interface Props {
   text: string;
   className?: string;
-  delay?: number;     // initial delay (s)
-  step?: number;      // per-char delay (s)
-  as?: keyof JSX.IntrinsicElements;
+  delay?: number;
+  step?: number;
+  as?: ElementType;
   charClassName?: string;
 }
 
 export function SplitText({ text, className, delay = 0, step = 0.025, as = "span", charClassName }: Props) {
-  const Tag = as as any;
+  const Tag: any = as;
   const words = text.split(" ");
   let idx = 0;
   const out: ReactNode[] = [];

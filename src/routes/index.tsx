@@ -5,6 +5,7 @@ import { Identity } from "@/components/Identity";
 import { Projects } from "@/components/Projects";
 import { Startups } from "@/components/Startups";
 import { Capabilities } from "@/components/Capabilities";
+import { Experience } from "@/components/Experience";
 import { VoiceInterface } from "@/components/VoiceInterface";
 import { Footer } from "@/components/Footer";
 import { Cursor } from "@/components/Cursor";
@@ -23,6 +24,7 @@ function Index() {
         <Identity />
         <Startups />
         <Projects />
+        <Experience />
         <Capabilities />
         <VoiceInterface />
       </main>

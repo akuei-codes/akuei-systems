@@ -103,12 +103,13 @@ export function Projects() {
               PRINCETON ALUMNI × STUDENT · REUNIONS
             </div>
             <p className="mb-3 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              A social app for Princeton students and alumni to find people to attend Reunions
-              events with, built around the actual Reunions schedule.
+              A social app for Princeton students and alumni to coordinate Reunions plans—anchored
+              to the official schedule so the weekend tracks what&apos;s actually happening on
+              campus.
             </p>
             <p className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground">
-              Real-time matching and messaging based on shared plans, plus location features so
-              people can find each other on the ground during events.
+              Real-time matching and messaging from shared plans, plus light location so you can
+              link up on the ground during events.
             </p>
             <div className="flex flex-wrap gap-2">
               {["React Native", "Node.js", "MongoDB", "WebSockets"].map((s) => (

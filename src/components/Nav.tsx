@@ -4,6 +4,7 @@ const links = [
   { id: "identity", label: "About" },
   { id: "startups", label: "Startups" },
   { id: "projects", label: "Work" },
+  { id: "experience", label: "Experience" },
   { id: "capabilities", label: "Stack" },
   { id: "contact", label: "Talk" },
 ];

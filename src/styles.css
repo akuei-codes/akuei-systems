@@ -222,3 +222,23 @@
 @keyframes blink { 50% { opacity: 0; } }
 
 .type-line { overflow: hidden; white-space: nowrap; }
+
+/* Name color treatments */
+.name-akuei {
+  background: linear-gradient(135deg, oklch(0.98 0 0) 0%, oklch(0.78 0.005 250) 60%, oklch(0.55 0.005 250) 100%);
+  background-clip: text; -webkit-background-clip: text; color: transparent;
+  background-size: 200% 200%; animation: shimmer 8s ease-in-out infinite;
+}
+.name-johnson {
+  background: linear-gradient(135deg, oklch(0.92 0.09 80) 0%, oklch(0.78 0.13 55) 100%);
+  background-clip: text; -webkit-background-clip: text; color: transparent;
+}
+.name-ateny {
+  background: linear-gradient(135deg, oklch(0.85 0.12 250) 0%, oklch(0.62 0.15 280) 100%);
+  background-clip: text; -webkit-background-clip: text; color: transparent;
+}
+.name-akuei2 {
+  background: linear-gradient(135deg, oklch(0.55 0.005 250) 0%, oklch(0.78 0.005 250) 40%, oklch(0.98 0 0) 100%);
+  background-clip: text; -webkit-background-clip: text; color: transparent;
+  background-size: 200% 200%; animation: shimmer 10s ease-in-out infinite reverse;
+}

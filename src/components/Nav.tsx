@@ -47,8 +47,18 @@ export function Nav() {
           </a>
         ))}
       </nav>
-      <div className="hidden md:block font-mono text-[10px] tracking-[0.25em] text-muted-foreground">
-        PRINCETON · {time}
+      <div className="hidden md:flex items-center gap-4">
+        <a
+          href="/akuei-resume.pdf"
+          download="Akuei_Akuei_Resume.pdf"
+          data-cursor
+          className="rounded-full border border-border px-3 py-1.5 font-mono text-[10px] tracking-[0.2em] text-foreground/80 hover:text-foreground hover:border-foreground/30 transition"
+        >
+          RESUME ↓
+        </a>
+        <span className="font-mono text-[10px] tracking-[0.25em] text-muted-foreground">
+          PRINCETON · {time}
+        </span>
       </div>
     </header>
   );

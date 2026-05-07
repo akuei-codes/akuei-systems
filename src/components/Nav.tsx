@@ -33,8 +33,8 @@ export function Nav() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-8 py-5">
-      <a href="#top" className="font-mono text-xs tracking-[0.3em] text-foreground/80 hover:text-foreground transition">
-        AKUEI<span className="text-muted-foreground">/</span>AKUEI
+      <a href="#top" className="font-mono text-[10px] tracking-[0.3em] text-foreground/80 hover:text-foreground transition">
+        AKUEI <span className="text-muted-foreground">·</span> JOHNSON <span className="text-muted-foreground">·</span> ATENY <span className="text-muted-foreground">·</span> AKUEI
       </a>
       <nav className="hidden md:flex glass rounded-full px-2 py-1.5 text-xs font-mono tracking-wider">
         {links.map((l) => (
@@ -50,7 +50,7 @@ export function Nav() {
       <div className="hidden md:flex items-center gap-4">
         <a
           href="/akuei-resume.pdf"
-          download="Akuei_Akuei_Resume.pdf"
+          download="Akuei_Johnson_Ateny_Akuei_Resume.pdf"
           data-cursor
           className="rounded-full border border-border px-3 py-1.5 font-mono text-[10px] tracking-[0.2em] text-foreground/80 hover:text-foreground hover:border-foreground/30 transition"
         >
